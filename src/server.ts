@@ -10,7 +10,7 @@ const app: Application = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/build')));
+
 // Routes
 import authRoutes from './routes/auth';
 import productRoutes from './routes/product';
@@ -33,8 +33,6 @@ mongoose.connect(mongoURI, {
 // Start server
 const PORT = process.env.PORT || 5000;
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/build', 'index.html'));
-  });
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
