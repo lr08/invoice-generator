@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc && npm run copy-templates",
+    "build": "tsc && npm run copy-templates && npm install puppeteer",
     "copy-templates": "copyfiles -u 1 src/templates/* dist",
     "postinstall": "npx puppeteer install"
   },
