@@ -31,7 +31,7 @@ router.get('/generate', async (req: Request, res: Response) => {
         );
         console.log('HTML content generated');
 
-        const browser = await puppeteer.launch({ headless: true , args: ['--no-sandbox', '--disable-setuid-sandbox'],executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+        const browser = await puppeteer.launch({ headless: true , args: ['--no-sandbox', '--disable-setuid-sandbox'],
         timeout: 60000 });
         console.log('Browser launched');
         const page = await browser.newPage();
