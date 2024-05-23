@@ -10,7 +10,7 @@
     "build": "tsc && npm run copy-templates && npm install puppeteer",
     "copy-templates": "copyfiles -u 1 src/templates/* dist",
     "postinstall": "npx puppeteer install",
-    "heroku-postbuild": "mkdir ./.cache && mv /app/.cache/puppeteer ./.cache"
+    
   },
   "keywords": [],
   "author": "",
