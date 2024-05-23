@@ -9,7 +9,7 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc && npm run copy-templates",
     "copy-templates": "copyfiles -u 1 src/templates/* dist",
-    "postinstall": "npx puppeteer install"
+    "postinstall": "npx puppeteer browsers install chrome"
   },
   "keywords": [],
   "author": "",
