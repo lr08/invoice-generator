@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-import authRoutes from './routes/auth';
-import productRoutes from './routes/product';
-import pdfRoutes from './routes/pdf';
+import authRoutes from './src/routes/auth';
+import productRoutes from './src/routes/product';
+import pdfRoutes from './src/routes/pdf';
 
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
